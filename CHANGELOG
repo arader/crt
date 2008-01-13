@@ -1,0 +1,10 @@
+CRT Changelog
+
+* 0.2.0:
+    * Added soft shadows, set the number of shadow calculations via
+      the `--shadows` command line argument. For best results, the value
+      should be a multiple of 64
+    * Fixed a few memory leaks
+
+* 0.1.0:
+    * Initial Release

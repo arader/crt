@@ -1,0 +1,22 @@
+<scene>
+ <box x="-2.0" y="5.0" z="-1.0" width="4.0" height="0.001" depth="2.0" light="area" />
+ <sphere x="0.0" y="0.0" z="0.0" radius="1.0">
+  <material r="1.0" g="1.0" b="1.0" diffuse="0.0" specular="1.0" reflectivity="1.0" />
+ </sphere>
+ <box x="2.0" y="-2.0" z="-1.0" width="0.5" height="0.5" depth="0.5">
+  <material r="0.7" g="0.7" b="0.5" diffuse="1.0" />
+ </box>
+ <plane x="0.0" y="1.0" z="0.0" distance="2.0" />
+ <plane x="0.0" y="0.0" z="-1.0" distance="9.0">
+  <material r="0.2" g="0.0" b="0.0" diffuse="1.0" />
+ </plane>
+ <plane x="0.0" y="-1.0" z="0.0" distance="9.0">
+  <material r="0.0" g="0.2" b="0.0" diffuse="1.0" />
+ </plane>
+ <plane x="1.0" y="0.0" z="0.0" distance="9.0">
+  <material r="0.2" g="0.0" b="0.2" diffuse="1.0" />
+ </plane>
+ <plane x="-1.0" y="0.0" z="0.0" distance="9.0">
+  <material r="0.2" g="0.2" b="0.0" diffuse="1.0" />
+ </plane>
+</scene>
