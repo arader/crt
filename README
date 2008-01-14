@@ -1,0 +1,75 @@
+# crt - the C raytracer #
+
+Raytracing is just one technique used in generating realistic images using a
+computer. In the real world, what we see is a direct result of light photons
+being emitted from a source (such as the sun, a light bulb, etc), bouncing off
+objects, and eventually being collected by our eyes. As simple as this is, it's
+still a lot of work for a computer to do.
+
+This is because many of the photons aren't actually percieved by us. Raytracing
+greatly simplifies the way lighting works by viewing light in the opposition
+direction. Instead of tracing photons from the sources, we trace a ray from our
+eye through the scene. This means we only calculate the rays of light that
+matter to us.
+
+The raytracing algorithm itself is relatively simple. For each pixel in the
+image, we trace a ray through that pixel and into the scene. We then check for
+an intersection with any of the objects in the scene. If the ray hits nothing,
+then that pixel becomes black. If the ray does intersect an object, that pixel
+becomes that objects color.
+
+After that, the pixel's color can be modified based on various other algorithms,
+such as lighting algorithms, reflections, etc. Reflections can easily be
+calculated by using the ray tracing algorithm recursively. Essentially, the
+reflective object becomes the "eye", and the scene is re-traced from that view
+point.
+
+## scene files ##
+
+crt uses a modular scene input scheme to allow scenes to be loaded from a
+variety of sources. Currently crt uses an XML plugin to load scene definition
+files from an XML file. An example of an object's XML:
+
+    <sphere x="1.0" y="2.0" z="0.0" radius="1.0">
+     <material r="1.0" g="0.0" b="0.0" diffuse="1.0" />
+    </sphere>
+
+## image output ##
+
+Again, crt uses a modular image output scheme to write images. Currently crt
+supports writing directly to a bitmap image.
+
+## features ##
+
+Currently crt features the following:
+
+  * 3 different shapes: spheres, axis-aligned boxes, and planes
+  * Point and Area light sources
+  * Shadows
+  * Anti-Aliasing
+  * Reflections
+  * Refractions
+
+## generated images ##
+
+<div class="image">
+ <img alt="scene1" src="/code/crt/images/scene1.png" />
+ <div class="image_footer">Scene 1 (<a href="/code/crt/images/scene1_1920x1200.png">1920x1200</a>)</div>
+</div>
+
+<div class="image">
+ <img alt="scene2" src="/code/crt/images/scene2.png" />
+ <div class="image_footer">Scene 2 (<a href="/code/crt/images/scene2_1920x1200.png">1920x1200</a>)</div>
+</div>
+
+<div class="image">
+ <img alt="scene3" src="/code/crt/images/scene3.png" />
+ <div class="image_footer">Scene 3 (<a href="/code/crt/images/scene3_1920x1200.png">1920x1200</a>)</div>
+</div>
+
+## GIT ##
+
+You can checkout a bleeding-edge version of crt with git using the following
+command:
+
+    git clone http://voidsplat.org/code/crt/crt.git
