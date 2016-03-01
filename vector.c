@@ -57,7 +57,7 @@ float vect_dot( vector *a, vector *b ) {
     return( a->x * b->x + a->y * b->y + a->z * b->z );
 }
 
-inline void vect_copy( vector *dest, vector *src ) {
+void vect_copy( vector *dest, vector *src ) {
     dest->x = src->x;
     dest->y = src->y;
     dest->z = src->z;

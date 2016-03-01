@@ -8,11 +8,11 @@ OBJS=$(SOURCES:.c=.o)
 
 AS=as
 CPP=cpp
-CC=gcc
+CC=cc
 
 ASFLAGS=
 CFLAGS=-Wall -Werror -ggdb
-LDFLAGS=-rdynamic -ldl -lm -lexpat
+LDFLAGS=-L/usr/local/lib -rdynamic -lm -lexpat
 
 $(PROG): $(SOURCES) outputs inputs
 	$(CC) $(CFLAGS) $(SOURCES) -o $(PROG) $(LDFLAGS)

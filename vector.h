@@ -63,6 +63,6 @@ float vect_dot( vector *a, vector *b );
  * vect_copy - copies the values from one vector
  * to another
  */
-inline void vect_copy( vector *dest, vector *src );
+void vect_copy( vector *dest, vector *src );
 
 #endif

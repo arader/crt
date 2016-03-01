@@ -375,8 +375,8 @@ int main( int argc, char **argv ) {
     int (*so_write)(int,int,color***,char*);
     primitive* (*so_load)(char*);
 
-    int width = 512;
-    int height = 512;
+    int width = 2048;
+    int height = 2048;
 
     color ***img = NULL;
     int i,j;

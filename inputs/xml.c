@@ -237,7 +237,7 @@ void start( void *data, const char *el, const char **attr ) {
         }
         else {
             fprintf( stderr,
-                    "*** xml: unknown primitive type \"%s\" at line %d\n",
+                    "*** xml: unknown primitive type \"%s\" at line %lu\n",
                     el, XML_GetCurrentLineNumber( pdata->parser ) );
             exit( 1 );
         }
@@ -311,7 +311,7 @@ primitive* load_scene( char *file ) {
         done = feof( ffile );
 
         if( ! XML_Parse( pdata->parser, buff, len, done ) ) {
-            fprintf( stderr, "*** xml: parse error at line %d:\n%s\n",
+            fprintf( stderr, "*** xml: parse error at line %lu:\n%s\n",
                     XML_GetCurrentLineNumber( pdata->parser ),
                     XML_ErrorString( XML_GetErrorCode( pdata->parser ) ) );
             exit( 1 );

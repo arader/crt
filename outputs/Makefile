@@ -4,10 +4,10 @@
 
 AS=as
 CPP=cpp
-CC=gcc
+CC=cc
 
 ASFLAGS=
-CFLAGS=-Wall -Werror -ggdb
+CFLAGS=-Wall -Werror -ggdb -fPIC
 LDFLAGS=-ldl
 
 bmp.so: bmp.c
